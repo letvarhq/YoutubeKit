@@ -244,7 +244,7 @@ open class YTSwiftyPlayer: WKWebView {
         guard let json = try? JSONSerialization.data(withJSONObject: parameters, options: []),
             let jsonString = String(data: json, encoding: String.Encoding.utf8),
             let html = htmlString?.replacingOccurrences(of: "%@", with: jsonString),
-            let baseUrl = URL(string: "https://www.youtube.com") else { return }
+            let baseUrl = URL(string: "https://www.youtube-nocookie.com") else { return }
         
         loadHTMLString(html, baseURL: baseUrl)
     }
